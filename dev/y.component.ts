@@ -1,8 +1,9 @@
 /**
  * Created by Hernan Y.Ke on 2016/2/15.
  */
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {TestComponent} from './test.component';
+//import {OnInit} from "../node_modules/angular2/src/core/linker/interfaces";
 
 @Component({
     selector:'y',
@@ -18,6 +19,10 @@ import {TestComponent} from './test.component';
     directives:[TestComponent]
 })
 
-export class YComponent {
-    name = 'myname';
+export class YComponent implements OnInit{
+    name: string;
+    ngOnInit():any{
+        this.name="name";
+    }
+
 }
